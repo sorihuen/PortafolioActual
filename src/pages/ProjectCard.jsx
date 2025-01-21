@@ -1,66 +1,75 @@
-import PropTypes from 'prop-types';
-import Card from "./Card";
-import ImageCarousel from "./ImageCarousel";
+
+import PropTypes from "prop-types"
+import Card from "./Card"
+import ImageCarousel from "./ImageCarousel"
 
 const ProjectCard = ({
-  title = 'Default Title',
+  title = "Default Title",
   images = [],
-  description = 'Default Description',
+  description = "Default Description",
   link = null,
   skills = [],
-  repo = null
+  repo = null,
 }) => {
   return (
     <Card title={title}>
-      <div className="space-y-4">
-        {images.length > 0 && <ImageCarousel images={images} />}
-        
-        <p className="text-white">{description}</p>
-        
-        {link && (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-cyan-600 hover:text-cyan-800 transition-colors duration-300"
-          >
-            Ver proyecto →
-          </a>
+      <div className="space-y-2">
+        {images.length > 0 && (
+          <div className="h-48 overflow-hidden rounded-t-lg">
+            <ImageCarousel images={images} />
+          </div>
         )}
 
-        {repo && (
-          <a
-            href={repo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-blue-500 hover:text-blue-700 transition-colors duration-300"
-          >
-            Ver repositorio →
-          </a>
-        )}
-        
-        <div className="flex flex-wrap gap-2">
-          {skills.map((skill) => (
-            <span
-              key={skill}
-              className="inline-block px-3 py-1 bg-cyan-100 text-cyan-900 rounded-full text-sm"
-            >
+        <p className="text-white text-sm line-clamp-3">{description}</p>
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {skills.slice(0, 3).map((skill) => (
+            <span key={skill} className="inline-block px-2 py-1 bg-cyan-100 text-cyan-900 rounded-full text-xs">
               {skill}
             </span>
           ))}
         </div>
+
+        <div className="flex justify-between text-sm">
+          {link && (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyan-600 hover:text-cyan-800 transition-colors duration-300"
+            >
+              Ver proyecto →
+            </a>
+          )}
+
+          {repo && (
+            <a
+              href={repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 transition-colors duration-300"
+            >
+              Ver repositorio →
+            </a>
+          )}
+        </div>
       </div>
     </Card>
-  );
-};
+  )
+}
 
 ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string,
-  repo: PropTypes.string, // Agregando validación para `repo`
+  repo: PropTypes.string,
   skills: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+}
 
-export default ProjectCard;
+export default ProjectCard
+
+
+
+
+

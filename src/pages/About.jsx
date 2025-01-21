@@ -12,16 +12,16 @@ const About = () => {
   // Redirige a la ruta deseada
   const handleGoBack = () => {
     console.log("Botón 'Volver atrás' presionado");
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   return (
     <div className="fixed inset-0 bg-amber-300 z-30 overflow-y-auto">
-      <Header 
-        title="Suyin Orihuen" 
-        isMenuOpen={isMenuOpen} 
-        toggleMenu={toggleMenu} 
-        onGoBack={handleGoBack} 
+      <Header
+        title="Suyin Orihuen"
+        isMenuOpen={isMenuOpen}
+        toggleMenu={toggleMenu}
+        onGoBack={handleGoBack}
       />
       <div className="min-h-screen p-4 sm:p-6 lg:p-8">
         <div className="relative sm:mb-12 mt-14 text-center">
@@ -34,11 +34,23 @@ const About = () => {
             <Card title="About Me">
               <div className="space-y-4">
                 <p className="text-white">
-                  Passionate Full Stack Developer creating elegant solutions with a
-                  background in web development.
+                  Passionate Full Stack Developer creating elegant solutions
+                  with a background in web development.
                 </p>
                 <div className="flex gap-4 flex-wrap">
-                  {['Frontend', 'Backend', 'Full Stack','Responsive Design','Version Control','Documentation','Automation','Security','Agile Development','Databases','Data Analysis'].map((skill) => (
+                  {[
+                    "Frontend",
+                    "Backend",
+                    "Full Stack",
+                    "Responsive Design",
+                    "Version Control",
+                    "Documentation",
+                    "Automation",
+                    "Security",
+                    "Agile Development",
+                    "Databases",
+                    "Data Analysis",
+                  ].map((skill) => (
                     <span
                       key={skill}
                       className="inline-block px-3 py-1 bg-cyan-100 text-cyan-900 rounded-full text-sm"
@@ -52,12 +64,26 @@ const About = () => {
 
             <Card title="SOFT SKILLS">
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4">
-                {['Self-starter', 'Creativity', 'Team player', 'Responsible', 'Adaptability', 'Leadership','Troubleshooting','Effective communication'].map((tech) => (
+                {[
+                  "Self-starter",
+                  "Creativity",
+                  "Team player",
+                  "Responsible",
+                  "Adaptability",
+                  "Leadership",
+                  "Conflict resolution",
+                  "Effective communication",
+                  "Attention to detail",
+                  "Empathy",
+                ].map((tech) => (
                   <div
                     key={tech}
                     className="p-3 bg-gray-50 rounded-lg text-center hover:bg-cyan-50 transition-colors duration-300"
                   >
-                    <span className="text-gray-700">{tech}</span>
+                    {/* Estilo adicional para manejar el desbordamiento del texto */}
+                    <span className="text-gray-700 block text-sm break-words">
+                      {tech}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -67,17 +93,19 @@ const About = () => {
               <div className="space-y-6">
                 {[
                   {
-                    title: 'Software Developer / Backend',
-                    company: 'Lets do it now.',
-                    period: 'Marzo 2022 - Julio 2024',
-                    description: 'Develop high-performance programs with different frameworks - Integrations with API (Google, Mercado Pago) - Deployment to servers'
+                    title: "Software Developer / Backend",
+                    company: "Lets do it now.",
+                    period: "Marzo 2022 - Julio 2024",
+                    description:
+                      "Develop high-performance programs with different frameworks - Integrations with API (Google, Mercado Pago) - Deployment to servers",
                   },
                   {
-                    title: 'Full Stack Developer',
-                    company: 'Salsa Verde',
-                    period: 'Julio 2024 - Octubre 2024',
-                    description: 'Development of web pages for restaurants - Documentation - Deployment to servers'
-                  }
+                    title: "Full Stack Developer",
+                    company: "Salsa Verde",
+                    period: "Julio 2024 - Octubre 2024",
+                    description:
+                      "Development of web pages for restaurants - Documentation - Deployment to servers",
+                  },
                 ].map((exp, index) => (
                   <div key={index} className="border-l-2 border-cyan-500 pl-4">
                     <h4 className="text-lg font-semibold text-slate-400">
@@ -94,7 +122,7 @@ const About = () => {
         </div>
       </div>
     </div>
-);
+  );
 };
 
 export default About;

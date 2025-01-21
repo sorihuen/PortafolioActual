@@ -7,6 +7,7 @@ import imgnodelogin from '../assets/img/nodelogin.png';
 import landing from '../assets/img/landing.png';
 import menu from '../assets/img/menu.png';
 import qr from '../assets/img/qr.png';
+import docsfastapi from '../assets/img/docsfastapi.png';
 import { useNavigate } from 'react-router-dom';
 
 const projectsData = [
@@ -28,11 +29,15 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Proyecto ",
-    images: ["/assets/proyecto2.jpg"],
-    description: "Descripción del proyecto 2",
-    skills: ["JavaScript", "HTML/CSS", "Firebase"],
-  }
+    title: "Web Scraping",
+    images: [docsfastapi ],
+    description: "Web scraping project utilizing Python and FastAPI, with data storage in MongoDB and containerization using Docker.",
+    link: "https://github.com/sorihuen/WebScraping.git",
+    skills: ["Python", "FastApi", "MongoDb", "Docker"],
+    
+
+  },
+
 ];
 
 const Work = () => {
@@ -64,9 +69,9 @@ const Work = () => {
             Work
           </h2>
         </div>
-        
+  
         <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectsData.map((project) => (
               <ProjectCard
                 key={project.id}
@@ -83,6 +88,7 @@ const Work = () => {
       </div>
     </div>
   );
+  
 };
 
 export default Work;

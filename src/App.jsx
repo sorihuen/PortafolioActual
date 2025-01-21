@@ -10,12 +10,12 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Navigate to="/portfolio" />} />
-        <Route path="/portfolio" element={<Portfolio />}>
-          <Route path="work" element={<Work />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="services" element={<Services />} />
-        </Route>
+        <Route path="/portfolio" element={<Portfolio />}/>
+          <Route path="/portfolio/work" element={<Work />} />
+          <Route path="/portfolio/about" element={<About />} />
+          <Route path="/portfolio/contact" element={<Contact />} />
+          <Route path="/portfolio/services" element={<Services />} />
+        {/* </Route> */}
       </Routes>
     </Router>
   );

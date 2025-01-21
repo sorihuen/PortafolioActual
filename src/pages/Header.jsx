@@ -5,7 +5,7 @@ import imglogo from "../assets/img/logosy.png";
 export default function Header({
   title,
   onGoBack = () => {},
-  showBackButton = true
+  showBackButton = true,
 }) {
   return (
     <header className="fixed top-0 left-0 w-full z-10 flex items-center justify-between bg-gray-100 bg-opacity-50 backdrop-filter backdrop-blur-sm px-4 py-2 lg:py-2 lg:px-6">
@@ -28,10 +28,9 @@ export default function Header({
       {showBackButton && (
         <button
           onClick={onGoBack}
-          className="p-2 bg-cyan-900 text-white rounded-lg transition-transform duration-300 flex items-center space-x-2"
+          className="p-2 bg-cyan-900 text-white rounded-lg transition-transform duration-300 flex items-center justify-center"
         >
           <ArrowLeft size={24} />
-          <span className="hidden sm:inline">Volver</span>
         </button>
       )}
     </header>
