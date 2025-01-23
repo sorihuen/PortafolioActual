@@ -25,7 +25,7 @@ const projectsData = [
     images: [landing, menu, qr],
     description: "This project is a sample landing page built using Vue.js and Vite. It demonstrates the basic functionalities and structure of a web application developed with these technologies, providing a clean and modern user interface.",
     link: "https://landingpages-eto.pages.dev/landing/qrcode",
-    skills: ["React","Vite","Responsive"],
+    skills: ["Vue","Vite","Responsive"],
   },
   {
     id: 3,
