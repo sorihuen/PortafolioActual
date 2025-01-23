@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types"
 import Card from "./Card"
 import ImageCarousel from "./ImageCarousel"
@@ -22,8 +21,9 @@ const ProjectCard = ({
 
         <p className="text-white text-sm line-clamp-3">{description}</p>
 
+        {/* Mostrar todas las skills, no solo las tres primeras */}
         <div className="flex flex-wrap gap-2 mb-2">
-          {skills.slice(0, 3).map((skill) => (
+          {skills.map((skill) => (
             <span key={skill} className="inline-block px-2 py-1 bg-cyan-100 text-cyan-900 rounded-full text-xs">
               {skill}
             </span>
@@ -68,6 +68,7 @@ ProjectCard.propTypes = {
 }
 
 export default ProjectCard
+
 
 
 
