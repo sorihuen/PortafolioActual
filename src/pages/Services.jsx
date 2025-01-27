@@ -85,7 +85,7 @@ function Services() {
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <button
             className="bg-amber-500 text-white px-6 py-2 rounded-lg hover:bg-amber-600 transition-colors duration-300"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/portfolio/contact")}
           >
             Contáctame
           </button>
