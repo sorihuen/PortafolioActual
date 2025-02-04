@@ -91,7 +91,6 @@ export default function Portfolio() {
   ];
 
   const handleCardClick = (section) => {
-    // Actualizamos la navegación para usar la ruta correcta
     navigate(`/portfolio/${section.toLowerCase()}`);
   };
 
@@ -153,13 +152,11 @@ export default function Portfolio() {
                 <Card
                   key={index}
                   title={section.title}
-                  className={`w-full sm:w-1/2 lg:w-full ${section.bgColor} ${section.hoverColor} rounded-lg shadow-lg overflow-hidden`} // Ajuste de ancho
-                  style={{ height: "auto" }} // Ajuste de altura
+                  className={`w-full sm:w-1/2 lg:w-full ${section.bgColor} ${section.hoverColor} rounded-lg shadow-lg overflow-hidden cursor-pointer`} // Agregado cursor-pointer
+                  style={{ height: "auto" }}
+                  onClick={() => handleCardClick(section.title)} 
                 >
-                  <div
-                    className="cursor-pointer flex flex-col justify-between p-1"
-                    onClick={() => handleCardClick(section.title)}
-                  >
+                  <div className="flex flex-col justify-between p-3">
                     <div className="mb-2">
                       <h3 className="text-base sm:text-lg font-bold mb-1 text-white">
                         {section.title}
@@ -174,10 +171,8 @@ export default function Portfolio() {
                       )}
                     </div>
 
-                    {/* Flexbox horizontal para los items */}
+                    {/* Íconos e items */}
                     <div className="flex flex-wrap justify-center gap-3">
-                      {" "}
-                      {/* Alineación horizontal de los íconos */}
                       {section.items.map((item, i) =>
                         typeof item === "object" && item.imgSrc ? (
                           <img
@@ -190,18 +185,15 @@ export default function Portfolio() {
                         ) : (
                           <span
                             key={i}
-                            className={`inline-block ${
-                              item.includes("@")
+                            className={`inline-block ${item.includes("@")
                                 ? "cursor-pointer text-amber-300 underline"
                                 : "bg-gray-500"
-                            } rounded-full px-2 py-0.5 text-xs font-semibold text-amber-300`}
+                              } rounded-full px-2 py-0.5 text-xs font-semibold text-amber-300`}
                             onClick={(e) => {
-                              e.stopPropagation();
+                              e.stopPropagation(); // Evita que el clic afecte la navegación
                               if (item === "Resume CV") handleResumeDownload();
-                              else if (item === "LinkedIn")
-                                handleLinkedInClick();
-                              else if (item.includes("@"))
-                                handleEmailClick(item);
+                              else if (item === "LinkedIn") handleLinkedInClick();
+                              else if (item.includes("@")) handleEmailClick(item);
                             }}
                           >
                             {item}
@@ -211,6 +203,7 @@ export default function Portfolio() {
                     </div>
                   </div>
                 </Card>
+
               ))}
             </div>
 
