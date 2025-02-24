@@ -9,6 +9,8 @@ import loginScraping from '../assets/img/loginScraping.png';
 import registerScraping from '../assets/img/registerScraping.png';
 import scraping from '../assets/img/scraping.png';
 import landing from '../assets/img/landing.png';
+import gitenvio from '../assets/img/gitenvio.png';
+import apienvio from '../assets/img/apienvio.png';
 import menu from '../assets/img/menu.png';
 import qr from '../assets/img/qr.png';
 import docsfastapi from '../assets/img/docsfastapi.png';
@@ -58,6 +60,16 @@ const projectsData = [
     description: "This frontend project for web scraping is developed using Vue.jsand Vite. It leverages Tailwind CSS for styling and ensures full responsiveness. The frontend fetches and displays data from backend APIs, providing a seamless and user-friendly experience",
     repo: "https://github.com/sorihuen/FrontAuthScraping.git",
     skills: ["Vuejs", "Vite", "Tailwind", "Responsive"],
+    
+
+  },
+  {
+    id: 5,
+    title: "Shipments",
+    images: [gitenvio,apienvio],
+    description: "This RESTful API is designed to manage operations related to shipments, drivers, and routes. The platform enables the optimization of delivery logistics through the efficient assignment of drivers to routes and order tracking.",
+    repo: "https://github.com/sorihuen/Shipments",
+    skills: ["Nodejs", "Dockerfile", "Redis", "Postgres", "JWT"],
     
 
   },
