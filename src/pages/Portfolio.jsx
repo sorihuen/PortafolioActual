@@ -62,6 +62,8 @@ export default function Portfolio() {
         { name: "Aws", imgSrc: techImages.Aws },
         { name: "Figma", imgSrc: techImages.Figma },
         { name: "Tailwind", imgSrc: techImages.Tailwind },
+        { name: "C#", imgSrc: techImages.imagenC },
+        
       ],
       bgColor: "bg-purple-900/20",
       hoverColor: "hover:bg-purple-800/30",

@@ -13,6 +13,7 @@ import Js from "../img/js.png";
 import Aws from "../img/aws.png";
 import Figma from "../img/figma.png";
 import Tailwind from "../img/tailwind.png";
+import imagenC from "../img/imageC.png"
 
 // Exportar un objeto con las imágenes
 export const techImages = {
@@ -30,4 +31,5 @@ export const techImages = {
     Aws,
     Figma,
     Tailwind,
+    imagenC,
 };

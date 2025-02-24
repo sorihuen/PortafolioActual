@@ -58,7 +58,7 @@ const projectsData = [
     images: [images.gitenvio,images.apienvio],
     description: "This RESTful API is designed to manage operations related to shipments, drivers, and routes. The platform enables the optimization of delivery logistics through the efficient assignment of drivers to routes and order tracking.",
     repo: "https://github.com/sorihuen/Shipments",
-    skills: ["Nodejs", "Dockerfile", "Redis", "Postgres", "JWT"],
+    skills: ["Nodejs", "Docker", "Redis", "Postgres", "JWT"],
     
 
   },
