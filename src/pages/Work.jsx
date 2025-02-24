@@ -11,6 +11,12 @@ import scraping from '../assets/img/scraping.png';
 import landing from '../assets/img/landing.png';
 import gitenvio from '../assets/img/gitenvio.png';
 import apienvio from '../assets/img/apienvio.png';
+import webh1 from '../assets/img/webh1.png';
+import webh2 from '../assets/img/webh2.png';
+import webh3 from '../assets/img/webh3.png';
+import webh4 from '../assets/img/webh4.png';
+import webhookapi from '../assets/img/webhookapi.png';
+import readmeWebhook from '../assets/img/readmeWebhook.png';
 import menu from '../assets/img/menu.png';
 import qr from '../assets/img/qr.png';
 import docsfastapi from '../assets/img/docsfastapi.png';
@@ -70,6 +76,26 @@ const projectsData = [
     description: "This RESTful API is designed to manage operations related to shipments, drivers, and routes. The platform enables the optimization of delivery logistics through the efficient assignment of drivers to routes and order tracking.",
     repo: "https://github.com/sorihuen/Shipments",
     skills: ["Nodejs", "Dockerfile", "Redis", "Postgres", "JWT"],
+    
+
+  },
+  {
+    id: 6,
+    title: "WebhookApi",
+    images: [webhookapi,readmeWebhook],
+    description: "This project is a webhook developed in ASP.NET 8.0 to receive and process notifications of transactions made through PayPal. It is designed to easily integrate with your system and handle payments securely, using modern authentication and database management technologies.",
+    repo: "https://github.com/sorihuen/WebhookAPi",
+    skills: [".NET 8.0", "C#", "SQL Server", "PayPal"],
+    
+
+  },
+  {
+    id: 7,
+    title: "Webhook",
+    images: [webh1,webh2,webh3,webh4, ],
+    description: "This is a project based on Next.js. It is designed to interact seamlessly with a C# backend API, ensuring efficient data exchange and smooth user experiences. Leveraging Next.js's powerful features for server-side rendering and static site generation, this project provides a modern, responsive, and highly performant web application.",
+    repo: "https://github.com/sorihuen/webhook",
+    skills: ["Next.js","Responsive", "Tailwind"],
     
 
   },
