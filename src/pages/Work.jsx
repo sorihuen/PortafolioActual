@@ -2,31 +2,14 @@
 import Header from "./Header";
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import imgnode from '../assets/img/nodelo.png';
-import imgnodelogin from '../assets/img/nodelogin.png';
-import editimg from '../assets/img/editImg.png';
-import loginScraping from '../assets/img/loginScraping.png';
-import registerScraping from '../assets/img/registerScraping.png';
-import scraping from '../assets/img/scraping.png';
-import landing from '../assets/img/landing.png';
-import gitenvio from '../assets/img/gitenvio.png';
-import apienvio from '../assets/img/apienvio.png';
-import webh1 from '../assets/img/webh1.png';
-import webh2 from '../assets/img/webh2.png';
-import webh3 from '../assets/img/webh3.png';
-import webh4 from '../assets/img/webh4.png';
-import webhookapi from '../assets/img/webhookapi.png';
-import readmeWebhook from '../assets/img/readmeWebhook.png';
-import menu from '../assets/img/menu.png';
-import qr from '../assets/img/qr.png';
-import docsfastapi from '../assets/img/docsfastapi.png';
+import images from '../assets/config/images';
 import { useNavigate } from 'react-router-dom';
 
 const projectsData = [
   {
     id: 1,
     title: "Login and Role-Based Session Start",
-    images: [imgnode,imgnodelogin], // Array de imágenes para el carrusel
+    images: [images.imgnode,images.imgnodelogin], // Array de imágenes para el carrusel
     description: "This project features a login system with role-based session initiation. It is designed for secure and efficient user authentication, leveraging Node.js and MongoDB for backend operations, along with HTML and CSS for the frontend",
     repo: "https://github.com/sorihuen/LoginNodejs", 
     skills: ['Nodejs', 'Mongodb', 'HTML', 'CSS'],
@@ -34,7 +17,7 @@ const projectsData = [
   {
     id: 2,
     title: "Landing Pages",
-    images: [landing, menu, qr],
+    images: [images.landing, images.menu, images.qr],
     description: "This project is a sample landing page built using Vue.js and Vite. It demonstrates the basic functionalities and structure of a web application developed with these technologies, providing a clean and modern user interface.",
     link: "https://landingpages-eto.pages.dev/landing/qrcode",
     skills: ["Vue","Vite","Responsive"],
@@ -42,7 +25,7 @@ const projectsData = [
   {
     id: 3,
     title: "Web Scraping",
-    images: [docsfastapi ],
+    images: [images.docsfastapi ],
     description: "Web scraping project utilizing Python and FastAPI, with data storage in MongoDB and containerization using Docker.",
     repo: "https://github.com/sorihuen/WebScraping.git",
     skills: ["Python", "FastApi", "MongoDb", "Docker", "JWT"],
@@ -52,7 +35,7 @@ const projectsData = [
   {
     id: 4,
     title: "Image Editor",
-    images: [editimg],
+    images: [images.editimg],
     description: "This is an image editing API developed with Flask. It provides functionalities such as image rotation, background removal, and filter application.",
     repo: "https://github.com/sorihuen/EditorImg",
     skills: ["Python", "Flask", "Docker"],
@@ -62,7 +45,7 @@ const projectsData = [
   {
     id: 4,
     title: "Web Scraping Auth",
-    images: [loginScraping, registerScraping, scraping],
+    images: [images.loginScraping, images.registerScraping, images.scraping],
     description: "This frontend project for web scraping is developed using Vue.jsand Vite. It leverages Tailwind CSS for styling and ensures full responsiveness. The frontend fetches and displays data from backend APIs, providing a seamless and user-friendly experience",
     repo: "https://github.com/sorihuen/FrontAuthScraping.git",
     skills: ["Vuejs", "Vite", "Tailwind", "Responsive"],
@@ -72,7 +55,7 @@ const projectsData = [
   {
     id: 5,
     title: "Shipments",
-    images: [gitenvio,apienvio],
+    images: [images.gitenvio,images.apienvio],
     description: "This RESTful API is designed to manage operations related to shipments, drivers, and routes. The platform enables the optimization of delivery logistics through the efficient assignment of drivers to routes and order tracking.",
     repo: "https://github.com/sorihuen/Shipments",
     skills: ["Nodejs", "Dockerfile", "Redis", "Postgres", "JWT"],
@@ -82,7 +65,7 @@ const projectsData = [
   {
     id: 6,
     title: "WebhookApi",
-    images: [webhookapi,readmeWebhook],
+    images: [images.webhookapi,images.readmeWebhook],
     description: "This project is a webhook developed in ASP.NET 8.0 to receive and process notifications of transactions made through PayPal. It is designed to easily integrate with your system and handle payments securely, using modern authentication and database management technologies.",
     repo: "https://github.com/sorihuen/WebhookAPi",
     skills: [".NET 8.0", "C#", "SQL Server", "PayPal"],
@@ -92,7 +75,7 @@ const projectsData = [
   {
     id: 7,
     title: "Webhook",
-    images: [webh1,webh2,webh3,webh4, ],
+    images: [images.webh1,images.webh2,images.webh3,images.webh4, ],
     description: "This is a project based on Next.js. It is designed to interact seamlessly with a C# backend API, ensuring efficient data exchange and smooth user experiences. Leveraging Next.js's powerful features for server-side rendering and static site generation, this project provides a modern, responsive, and highly performant web application.",
     repo: "https://github.com/sorihuen/webhook",
     skills: ["Next.js","Responsive", "Tailwind"],
@@ -107,10 +90,7 @@ const Work = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  // const handleGoBack = () => {
-  //   console.log("Botón 'Volver atrás' presionado");
-  //   window.location.href = '/';
-  // }
+
   const navigate = useNavigate();
   const handleGoBack = () => {
     console.log("Botón 'Volver atrás' presionado");
